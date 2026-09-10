@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Versear - 関西大学総合情報学部公認プログラミングサークル</title>
+
+  <!-- Google Fonts: Inter & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            versear: {
+              bg: '#080a12',
+              card: '#0d1121',
+              cardHover: '#13192e',
+              border: 'rgba(255, 255, 255, 0.08)',
+              blue: '#38bdf8',
+              purple: '#a855f7',
+              pink: '#ec4899',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Dark Neon CSS Styling -->
+  <style>
+    body {
+      background-color: #080a12;
+      color: #e2e8f0;
+      background-image: 
+        radial-gradient(circle at 20% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 50%, rgba(168, 85, 247, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 50% 85%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .text-gradient-versear {
+      background: linear-gradient(135deg, #38bdf8 0%, #a855f7 50%, #ec4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass-card {
+      background: rgba(13, 17, 33, 0.75);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .glass-card:hover {
+      border-color: rgba(56, 189, 248, 0.25);
+      box-shadow: 0 12px 35px -8px rgba(56, 189, 248, 0.12);
+    }
+
+    .badge-cyan {
+      background: rgba(6, 182, 212, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(6, 182, 212, 0.3);
+    }
+
+    .badge-purple {
+      background: rgba(168, 85, 247, 0.15);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+
+    .badge-amber {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #080a12;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-cyan-500 selection:text-black min-h-screen flex flex-col">
+
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-[#080a12]/80 backdrop-blur-xl">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2 group">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 via-blue-600 to-purple-600 flex items-center justify-center font-bold text-white shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+          V
+        </div>
+        <span class="text-xl font-bold font-display tracking-tight text-white">Versear</span>
+        <span class="text-xs text-slate-500 font-mono hidden sm:inline ml-1">/ 関西大学</span>
+      </a>
+
+      <!-- Menu Navigation -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-cyan-400 transition-colors">概要</a>
+        <a href="#activities" class="hover:text-cyan-400 transition-colors">活動</a>
+        <a href="#members" class="hover:text-cyan-400 transition-colors">メンバー</a>
+        <a href="#join" class="hover:text-cyan-400 transition-colors">参加</a>
+      </nav>
+
+      <!-- Social Icons -->
+      <div class="flex items-center gap-2.5">
+        <a href="https://x.com/Versear_Sojo?s=20" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-slate-300 hover:text-white transition">
+          <i class="fa-brands fa-x-twitter text-xs"></i>
+        </a>
+        <a href="https://www.instagram.com/kandai_versear/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-slate-300 hover:text-pink-400 transition">
+          <i class="fa-brands fa-instagram text-xs"></i>
+        </a>
+        <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-slate-300 hover:text-indigo-400 transition">
+          <i class="fa-brands fa-discord text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-1 space-y-20 py-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
+
+    <!-- Hero Section -->
+    <section class="text-center pt-8 md:pt-14 pb-4 space-y-8 relative">
+      
+      <!-- Top Tag Badge -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-medium">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+        関西大学 プログラミングサークル
+      </div>
+
+      <!-- Main Title -->
+      <div class="space-y-3">
+        <h1 class="text-6xl sm:text-7xl md:text-8xl font-black font-display tracking-tight text-gradient-versear filter drop-shadow-lg">
+          Versear
+        </h1>
+        <p class="text-xs sm:text-sm font-mono text-slate-400 tracking-wider">
+          Versear Programming university club
+        </p>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+        <a href="#about" class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-bold text-xs shadow-lg shadow-blue-500/25 transition hover:scale-105">
+          サークルについて
+        </a>
+        <a href="#join" class="px-6 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-slate-200 font-bold text-xs backdrop-blur-md transition hover:scale-105 flex items-center gap-2">
+          参加する <i class="fa-solid fa-plus text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- Hero Statistics Cards -->
+      <div class="grid grid-cols-2 gap-4 max-w-md mx-auto pt-4">
+        <div class="glass-card p-5 rounded-2xl text-left relative overflow-hidden">
+          <div class="text-2xl sm:text-3xl font-extrabold text-white font-display">??<span class="text-cyan-400 text-lg font-normal">名</span></div>
+          <div class="text-xs text-slate-400 mt-1">メンバー</div>
+        </div>
+
+        <div class="glass-card p-5 rounded-2xl text-left relative overflow-hidden">
+          <div class="text-2xl sm:text-3xl font-extrabold text-white font-display">2021<span class="text-purple-400 text-lg font-normal">年</span></div>
+          <div class="text-xs text-slate-400 mt-1">設立</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 概要 Section -->
+    <section id="about" class="space-y-6">
+      <div class="flex items-center gap-3">
+        <span class="text-xs font-bold font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">01</span>
+        <h2 class="text-2xl font-bold text-white tracking-tight">概要</h2>
+        <div class="h-px bg-white/10 flex-1 ml-2"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Circle Info -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <h3 class="text-base font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-laptop-code text-cyan-400"></i>
+              比較的新興のプログラミングサークル
+            </h3>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              <strong class="text-white">Versear</strong>は2021年に設立された新しいプログラミングサークルです。在籍人数は比較的少なめで、且つ曜日別の活動が行われているのでよりチームワークが高まります。
+            </p>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              関西大学学部届出団体で安心。
+            </p>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              初心者も経験者も大歓迎。
+            </p>
+          </div>
+        </div>
+
+        <!-- Grade Distribution Chart Block -->
+        <div class="glass-card p-6 rounded-2xl space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-solid fa-users text-purple-400"></i>
+              メンバー構成
+            </h3>
+            <div class="text-right">
+              <span class="text-xl font-bold text-white font-display">??</span>
+              <span class="text-xs text-slate-400">名 在籍</span>
+            </div>
+          </div>
+
+          <div class="space-y-3 text-xs">
+            <div class="space-y-1">
+              <div class="flex justify-between font-medium text-slate-300">
+                <span>1年生</span>
+                <span class="text-cyan-400 font-mono">??名</span>
+              </div>
+              <div class="w-full bg-slate-800/80 rounded-full h-1.5 overflow-hidden">
+                <div class="bg-cyan-400 h-full w-[40%] rounded-full"></div>
+              </div>
+            </div>
+
+            <div class="space-y-1">
+              <div class="flex justify-between font-medium text-slate-300">
+                <span>2年生</span>
+                <span class="text-purple-400 font-mono">??名</span>
+              </div>
+              <div class="w-full bg-slate-800/80 rounded-full h-1.5 overflow-hidden">
+                <div class="bg-purple-400 h-full w-[35%] rounded-full"></div>
+              </div>
+            </div>
+
+            <div class="space-y-1">
+              <div class="flex justify-between font-medium text-slate-300">
+                <span>3年生</span>
+                <span class="text-pink-400 font-mono">??名</span>
+              </div>
+              <div class="w-full bg-slate-800/80 rounded-full h-1.5 overflow-hidden">
+                <div class="bg-pink-400 h-full w-[15%] rounded-full"></div>
+              </div>
+            </div>
+
+            <div class="space-y-1">
+              <div class="flex justify-between font-medium text-slate-300">
+                <span>4年生</span>
+                <span class="text-amber-400 font-mono">??名</span>
+              </div>
+              <div class="w-full bg-slate-800/80 rounded-full h-1.5 overflow-hidden">
+                <div class="bg-amber-400 h-full w-[10%] rounded-full"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-[10px] text-slate-500 font-mono text-right pt-1">
+            2026.09 更新
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 活動 Section -->
+    <section id="activities" class="space-y-6">
+      <div class="flex items-center gap-3">
+        <span class="text-xs font-bold font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">02</span>
+        <h2 class="text-2xl font-bold text-white tracking-tight">活動</h2>
+        <div class="h-px bg-white/10 flex-1 ml-2"></div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <!-- Activity Card 1 -->
+        <div class="glass-card p-5 rounded-2xl space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="badge-cyan px-2 py-0.5 rounded text-[10px] font-mono font-bold">VDL</span>
+            <i class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i>
+          </div>
+          <h3 class="text-sm font-bold text-white">とどねちゃん構想</h3>
+          <p class="text-xs text-slate-400">VDLのキャラクターである「夢影トドネ」が、A棟事務室前でサイネージ越しに
+音声案内を行うシステムの制作をVersearとVDL が共同で取り組むプロジェクト</p>
+        </div>
+
+        <!-- Activity Card 2 -->
+        <div class="glass-card p-5 rounded-2xl space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="badge-purple px-2 py-0.5 rounded text-[10px] font-mono font-bold">食堂</span>
+            <i class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i>
+          </div>
+          <h3 class="text-sm font-bold text-white">学食改修</h3>
+          <p class="text-xs text-slate-400">学食の改修にあたり、食券のシステムを導入する予定。</p>
+        </div>
+
+        <!-- Activity Card 3 -->
+        <div class="glass-card p-5 rounded-2xl space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="badge-cyan px-2 py-0.5 rounded text-[10px] font-mono font-bold">WEB</span>
+            <i class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i>
+          </div>
+          <h3 class="text-sm font-bold text-white">学部公認団体HP開発</h3>
+          <p class="text-xs text-slate-400">このWebサイト</p>
+        </div>
+
+        <!-- Activity Card 4 -->
+        <div class="glass-card p-5 rounded-2xl space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="badge-amber px-2 py-0.5 rounded text-[10px] font-mono font-bold">バス</span>
+            <i class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i>
+          </div>
+          <h3 class="text-sm font-bold text-white">シャトルバス予約システム</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            関西大学総合情報学部の生徒が高槻キャンパスからJR高槻駅を行き来する際に利用できるシャトルバスの予約をするシステム
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 メンバー Section -->
+    <section id="members" class="space-y-6">
+      <div class="flex items-center gap-3">
+        <span class="text-xs font-bold font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">03</span>
+        <h2 class="text-2xl font-bold text-white tracking-tight">メンバー</h2>
+        <div class="h-px bg-white/10 flex-1 ml-2"></div>
+      </div>
+
+      <!-- Member Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="glass-card p-5 rounded-2xl text-center space-y-2">
+          <div class="text-2xl font-black text-white font-display">??</div>
+          <div class="text-[11px] font-mono text-cyan-400">1回生</div>
+        </div>
+
+        <div class="glass-card p-5 rounded-2xl text-center space-y-2">
+          <div class="text-2xl font-black text-white font-display">??</div>
+          <div class="text-[11px] font-mono text-purple-400">2回生</div>
+        </div>
+
+        <div class="glass-card p-5 rounded-2xl text-center space-y-2">
+          <div class="text-2xl font-black text-white font-display">??</div>
+          <div class="text-[11px] font-mono text-emerald-400">3回生</div>
+        </div>
+
+        <div class="glass-card p-5 rounded-2xl text-center space-y-2">
+          <div class="text-2xl font-black text-white font-display">??</div>
+          <div class="text-[11px] font-mono text-amber-400">4回生</div>
+        </div>
+      </div>
+
+      <!-- Member Summary Row -->
+      <div class="glass-card p-5 rounded-2xl flex items-center justify-between">
+        <div>
+          <div class="text-lg font-bold text-white">合計 <span class="text-cyan-400 font-display font-black text-xl">??</span> 名</div>
+          <div class="text-xs text-slate-400 mt-0.5">全学年随時募集中です</div>
+        </div>
+        <a href="#join" class="px-4 py-2 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs transition">
+          参加する &gt;
+        </a>
+      </div>
+    </section>
+
+    <!-- 04 参加・お問い合わせ Section -->
+    <section id="join" class="space-y-6">
+      <div class="flex items-center gap-3">
+        <span class="text-xs font-bold font-mono px-2 py-0.5 rounded bg-pink-500/10 text-pink-400 border border-pink-500/20">04</span>
+        <h2 class="text-2xl font-bold text-white tracking-tight">参加・お問い合わせ</h2>
+        <div class="h-px bg-white/10 flex-1 ml-2"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Contact Links -->
+        <div class="space-y-4">
+          <div class="glass-card p-6 rounded-2xl space-y-4">
+            <h3 class="text-sm font-bold text-white">一緒につくろう</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              質問等もお気軽にご連絡ください。
+            </p>
+
+            <div class="space-y-2">
+              <a href="https://x.com/Versear_Sojo?s=20" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-slate-200 transition">
+                <span class="flex items-center gap-2">
+                  <i class="fa-brands fa-x-twitter"></i> X
+                </span>
+                <i class="fa-solid fa-chevron-right text-[10px] text-slate-500"></i>
+              </a>
+
+              <a href="https://www.instagram.com/kandai_versear/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-slate-200 transition">
+                <span class="flex items-center gap-2">
+                  <i class="fa-brands fa-instagram text-pink-400"></i> Instagram
+                </span>
+                <i class="fa-solid fa-chevron-right text-[10px] text-slate-500"></i>
+              </a>
+
+              <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-slate-200 transition">
+                <span class="flex items-center gap-2">
+                  <i class="fa-brands fa-discord text-indigo-400"></i> Discord
+                </span>
+                <i class="fa-solid fa-chevron-right text-[10px] text-slate-500"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="glass-card p-4 rounded-2xl border-l-4 border-l-cyan-400 space-y-1">
+            <div class="text-xs font-bold text-cyan-400">初心者も大歓迎です</div>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              プログラミングを始めたばかりでも、一緒に学べる環境が整っています。
+            </p>
+          </div>
+        </div>
+
+        <!-- Campus Location Card -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="badge-cyan px-2 py-0.5 rounded text-[10px] font-mono font-bold">活動拠点</span>
+            </div>
+            <h3 class="text-base font-bold text-white">関西大学 高槻キャンパス</h3>
+            <p class="text-xs text-slate-400 font-mono">〒569-1052 大阪府高槻市霊仙寺町2-1-1</p>
+          </div>
+
+          <!-- Map Display -->
+          <div class="w-full h-40 rounded-xl bg-slate-900 border border-white/10 overflow-hidden relative group flex items-center justify-center">
+            <iframe
+              src="https://maps.google.com/maps?q=34.878085,135.575543&z=16&output=embed"
+              width="100%"
+              height="300"
+              style="border:0; border-radius: 12px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="absolute bottom-2 right-2">
+              <a href="https://maps.app.goo.gl/9Bd5QHCWWYaSTbXj6" target="_blank" class="px-3 py-1 rounded-lg bg-black/80 text-white text-[10px] font-bold border border-white/20 backdrop-blur-md transition flex items-center gap-1">
+                <i class="fa-solid fa-map-location-dot text-cyan-400"></i> 地図を開く
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-[#06070d] py-6 px-4 text-center text-xs text-slate-500 flex items-center justify-between max-w-6xl mx-auto w-full">
+    <div class="font-bold text-slate-300 font-display">Versear</div>
+    <div>&copy; 2026 Versear 関西大学プログラミングサークル</div>
+    <div class="flex items-center gap-2">
+      <a href="https://x.com/Versear_Sojo?s=20" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/kandai_versear/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 transition">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition">
+        <i class="fa-brands fa-discord"></i>
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
