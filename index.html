@@ -70,24 +70,6 @@
       box-shadow: 0 12px 35px -8px rgba(56, 189, 248, 0.12);
     }
 
-    .badge-cyan {
-      background: rgba(6, 182, 212, 0.15);
-      color: #38bdf8;
-      border: 1px solid rgba(6, 182, 212, 0.3);
-    }
-
-    .badge-purple {
-      background: rgba(168, 85, 247, 0.15);
-      color: #c084fc;
-      border: 1px solid rgba(168, 85, 247, 0.3);
-    }
-
-    .badge-amber {
-      background: rgba(245, 158, 11, 0.15);
-      color: #fbbf24;
-      border: 1px solid rgba(245, 158, 11, 0.3);
-    }
-
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -119,22 +101,8 @@
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
         <a href="#about" class="hover:text-cyan-400 transition-colors">概要</a>
         <a href="#activities" class="hover:text-cyan-400 transition-colors">活動</a>
-        <a href="#members" class="hover:text-cyan-400 transition-colors">メンバー</a>
         <a href="#join" class="hover:text-cyan-400 transition-colors">参加</a>
       </nav>
-
-      <!-- Social Icons -->
-      <div class="flex items-center gap-2.5">
-        <a href="https://x.com/Versear_Sojo?s=20" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-slate-300 hover:text-white transition">
-          <i class="fa-brands fa-x-twitter text-xs"></i>
-        </a>
-        <a href="https://www.instagram.com/kandai_versear/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-slate-300 hover:text-pink-400 transition">
-          <i class="fa-brands fa-instagram text-xs"></i>
-        </a>
-        <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-slate-300 hover:text-indigo-400 transition">
-          <i class="fa-brands fa-discord text-xs"></i>
-        </a>
-      </div>
     </div>
   </header>
 
@@ -169,19 +137,6 @@
           参加する <i class="fa-solid fa-plus text-[10px]"></i>
         </a>
       </div>
-
-      <!-- Hero Statistics Cards -->
-      <div class="grid grid-cols-2 gap-4 max-w-md mx-auto pt-4">
-        <div class="glass-card p-5 rounded-2xl text-left relative overflow-hidden">
-          <div class="text-2xl sm:text-3xl font-extrabold text-white font-display">??<span class="text-cyan-400 text-lg font-normal">名</span></div>
-          <div class="text-xs text-slate-400 mt-1">メンバー</div>
-        </div>
-
-        <div class="glass-card p-5 rounded-2xl text-left relative overflow-hidden">
-          <div class="text-2xl sm:text-3xl font-extrabold text-white font-display">2021<span class="text-purple-400 text-lg font-normal">年</span></div>
-          <div class="text-xs text-slate-400 mt-1">設立</div>
-        </div>
-      </div>
     </section>
 
     <!-- 01 概要 Section -->
@@ -198,16 +153,18 @@
           <div class="space-y-3">
             <h3 class="text-base font-bold text-white flex items-center gap-2">
               <i class="fa-solid fa-laptop-code text-cyan-400"></i>
-              比較的新興のプログラミングサークル
+              関西大学総合情報学部公認のサークル
             </h3>
             <p class="text-slate-300 text-xs leading-relaxed">
-              <strong class="text-white">Versear</strong>は2021年に設立された新しいプログラミングサークルです。在籍人数は比較的少なめで、且つ曜日別の活動が行われているのでよりチームワークが高まります。
+              <strong class="text-white">Versear</strong>は2021年設立のプログラミングサークル。
+
+
+            <p class="text-slate-300 text-xs leading-relaxed">
+              週1回、空きコマを利用してグループごとに楽しく活動を行なっています。
+頼れる先輩メンターが丁寧に教えてくれるので、初心者からでも無理なくスキルアップできます。
             </p>
             <p class="text-slate-300 text-xs leading-relaxed">
-              関西大学学部届出団体で安心。
-            </p>
-            <p class="text-slate-300 text-xs leading-relaxed">
-              初心者も経験者も大歓迎。
+              個人での学習だけでなく、実際に依頼を受けてシステムやWebサイトなどを作る「リアルな開発経験」ができるのも魅力のひとつ。仲間と一緒に楽しくモノづくりを始めてみませんか？
             </p>
           </div>
         </div>
@@ -286,7 +243,6 @@
         <!-- Activity Card 1 -->
         <div class="glass-card p-5 rounded-2xl space-y-2">
           <div class="flex items-center justify-between">
-            <span class="badge-cyan px-2 py-0.5 rounded text-[10px] font-mono font-bold">VDL</span>
             <i class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i>
           </div>
           <h3 class="text-sm font-bold text-white">とどねちゃん構想</h3>
@@ -297,7 +253,6 @@
         <!-- Activity Card 2 -->
         <div class="glass-card p-5 rounded-2xl space-y-2">
           <div class="flex items-center justify-between">
-            <span class="badge-purple px-2 py-0.5 rounded text-[10px] font-mono font-bold">食堂</span>
             <i class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i>
           </div>
           <h3 class="text-sm font-bold text-white">学食改修</h3>
@@ -307,7 +262,6 @@
         <!-- Activity Card 3 -->
         <div class="glass-card p-5 rounded-2xl space-y-2">
           <div class="flex items-center justify-between">
-            <span class="badge-cyan px-2 py-0.5 rounded text-[10px] font-mono font-bold">WEB</span>
             <i class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i>
           </div>
           <h3 class="text-sm font-bold text-white">学部公認団体HP開発</h3>
@@ -317,7 +271,6 @@
         <!-- Activity Card 4 -->
         <div class="glass-card p-5 rounded-2xl space-y-2">
           <div class="flex items-center justify-between">
-            <span class="badge-amber px-2 py-0.5 rounded text-[10px] font-mono font-bold">バス</span>
             <i class="fa-solid fa-chevron-right text-[10px] text-slate-600"></i>
           </div>
           <h3 class="text-sm font-bold text-white">シャトルバス予約システム</h3>
@@ -328,50 +281,9 @@
       </div>
     </section>
 
-    <!-- 03 メンバー Section -->
-    <section id="members" class="space-y-6">
-      <div class="flex items-center gap-3">
-        <span class="text-xs font-bold font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">03</span>
-        <h2 class="text-2xl font-bold text-white tracking-tight">メンバー</h2>
-        <div class="h-px bg-white/10 flex-1 ml-2"></div>
-      </div>
 
-      <!-- Member Grid -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div class="glass-card p-5 rounded-2xl text-center space-y-2">
-          <div class="text-2xl font-black text-white font-display">??</div>
-          <div class="text-[11px] font-mono text-cyan-400">1回生</div>
-        </div>
 
-        <div class="glass-card p-5 rounded-2xl text-center space-y-2">
-          <div class="text-2xl font-black text-white font-display">??</div>
-          <div class="text-[11px] font-mono text-purple-400">2回生</div>
-        </div>
-
-        <div class="glass-card p-5 rounded-2xl text-center space-y-2">
-          <div class="text-2xl font-black text-white font-display">??</div>
-          <div class="text-[11px] font-mono text-emerald-400">3回生</div>
-        </div>
-
-        <div class="glass-card p-5 rounded-2xl text-center space-y-2">
-          <div class="text-2xl font-black text-white font-display">??</div>
-          <div class="text-[11px] font-mono text-amber-400">4回生</div>
-        </div>
-      </div>
-
-      <!-- Member Summary Row -->
-      <div class="glass-card p-5 rounded-2xl flex items-center justify-between">
-        <div>
-          <div class="text-lg font-bold text-white">合計 <span class="text-cyan-400 font-display font-black text-xl">??</span> 名</div>
-          <div class="text-xs text-slate-400 mt-0.5">全学年随時募集中です</div>
-        </div>
-        <a href="#join" class="px-4 py-2 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs transition">
-          参加する &gt;
-        </a>
-      </div>
-    </section>
-
-    <!-- 04 参加・お問い合わせ Section -->
+    <!-- 03 参加・お問い合わせ Section -->
     <section id="join" class="space-y-6">
       <div class="flex items-center gap-3">
         <span class="text-xs font-bold font-mono px-2 py-0.5 rounded bg-pink-500/10 text-pink-400 border border-pink-500/20">04</span>
@@ -411,23 +323,16 @@
               </a>
             </div>
           </div>
-
-          <div class="glass-card p-4 rounded-2xl border-l-4 border-l-cyan-400 space-y-1">
-            <div class="text-xs font-bold text-cyan-400">初心者も大歓迎です</div>
-            <p class="text-xs text-slate-400 leading-relaxed">
-              プログラミングを始めたばかりでも、一緒に学べる環境が整っています。
-            </p>
-          </div>
         </div>
 
         <!-- Campus Location Card -->
         <div class="glass-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
           <div class="space-y-2">
             <div class="flex items-center justify-between">
-              <span class="badge-cyan px-2 py-0.5 rounded text-[10px] font-mono font-bold">活動拠点</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-500/15 text-cyan-400 border border-cyan-500/30">活動拠点</span>
             </div>
-            <h3 class="text-base font-bold text-white">関西大学 高槻キャンパス</h3>
-            <p class="text-xs text-slate-400 font-mono">〒569-1052 大阪府高槻市霊仙寺町2-1-1</p>
+            <h3 class="text-base font-bold text-white">関西大学 高槻キャンパス F棟</h3>
+            <p class="text-xs text-slate-400 font-mono">大阪府高槻市霊仙寺町２丁目１−１</p>
           </div>
 
           <!-- Map Display -->
@@ -458,17 +363,6 @@
   <footer class="border-t border-white/10 bg-[#06070d] py-6 px-4 text-center text-xs text-slate-500 flex items-center justify-between max-w-6xl mx-auto w-full">
     <div class="font-bold text-slate-300 font-display">Versear</div>
     <div>&copy; 2026 Versear 関西大学プログラミングサークル</div>
-    <div class="flex items-center gap-2">
-      <a href="https://x.com/Versear_Sojo?s=20" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">
-        <i class="fa-brands fa-x-twitter"></i>
-      </a>
-      <a href="https://www.instagram.com/kandai_versear/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 transition">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-      <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition">
-        <i class="fa-brands fa-discord"></i>
-      </a>
-    </div>
   </footer>
 
 </body>
